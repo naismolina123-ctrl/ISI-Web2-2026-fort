@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Teams</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #d792d8ca; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #3d0542; padding: 10px; text-align: left; }
+        th { background-color: #822e9e; }
+        button { margin: 2px; padding: 5px 10px; cursor: pointer; }
+        .error-msg { color: #d9534f; font-weight: bold; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Gestión de Equipos (Teams)</h1>
+
+    <input type="text" id="teamName" placeholder="Nombre del equipo...">
+    <button onclick="guardarTeam()">Guardar Equipo</button>
+
+    <br><br>
+
+    <input type="text" id="buscar" placeholder="Buscar equipo..." onkeyup="buscarTeam()">
+
+    <br><br>
+
+    <div id="mensaje" class="error-msg"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código ID</th>
+                <th>Nombre del Equipo</th>
+                <th>Acciones de Control</th>
+            </tr>
+        </thead>
+        <tbody id="teamsBody"></tbody>
+    </table>
+
+    <script src="anahi.js"></script>
+
+</body>
+</html>

@@ -15,9 +15,9 @@ async function handleLoginSubmit(event) {
     const data = await response.json();
     if (response.ok) {
         const tokenString = JSON.stringify(data);
-        localStorage.setItem('token', tokenString);
+        localStorage.setItem('token', data.token);
         setTimeout(() => {
-            window.location.href = window.location.origin + '/pages/admin/teams/teams.html';
+            window.location.href = window.location.origin + '/pages/admin/anahialeman/anahi.html';
         }, 2000);
     } else {
         console.log('Login failed: ' + data.message);
